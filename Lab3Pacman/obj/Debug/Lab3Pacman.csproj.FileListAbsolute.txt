@@ -1,0 +1,19 @@
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.csprojAssemblyReference.cache
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.Properties.Resources.resources
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.csproj.GenerateResource.cache
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\bin\Debug\Lab3Pacman.exe.config
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\bin\Debug\Lab3Pacman.exe
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\bin\Debug\Lab3Pacman.pdb
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.exe
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.pdb
+C:\Users\Andrew\STUD\Univ\IS_4\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.MainForm.resources
+C:\Users\klisa\OneDrive\Робочий стіл\Lab3Pacman\Lab3Pacman\bin\Debug\Lab3Pacman.exe.config
+C:\Users\klisa\OneDrive\Робочий стіл\Lab3Pacman\Lab3Pacman\bin\Debug\Lab3Pacman.exe
+C:\Users\klisa\OneDrive\Робочий стіл\Lab3Pacman\Lab3Pacman\bin\Debug\Lab3Pacman.pdb
+C:\Users\klisa\OneDrive\Робочий стіл\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.csprojAssemblyReference.cache
+C:\Users\klisa\OneDrive\Робочий стіл\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.MainForm.resources
+C:\Users\klisa\OneDrive\Робочий стіл\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.Properties.Resources.resources
+C:\Users\klisa\OneDrive\Робочий стіл\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.csproj.GenerateResource.cache
+C:\Users\klisa\OneDrive\Робочий стіл\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.exe
+C:\Users\klisa\OneDrive\Робочий стіл\Lab3Pacman\Lab3Pacman\obj\Debug\Lab3Pacman.pdb
