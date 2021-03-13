@@ -69,6 +69,30 @@ namespace Lab3Pacman
                 MessageBox.Show("Cant find path!", "Problem");
             }
         }
+        private void Astar_Click(object sender, EventArgs e)
+        {
+            button("A");
+            if (pacman.Path.Count > 1)
+            {
+                MoveAndDraw();
+            }
+            else
+            {
+                MessageBox.Show("Cant find path!", "Problem");
+            }
+        }
+        private void Greedy_Click(object sender, EventArgs e)
+        {
+            button("Greedy");
+            if (pacman.Path.Count > 1)
+            {
+                MoveAndDraw();
+            }
+            else
+            {
+                MessageBox.Show("Cant find path!", "Problem");
+            }
+        }
 
         private void createAreaButton_Click(object sender, EventArgs e)
         {
@@ -96,6 +120,11 @@ namespace Lab3Pacman
                 Area = area,
                 Finish = area.Area.First(x => (x.X == (n - 10) / 2 && x.Y == n - 1 ))
             };
+            foreach(Coordinate c in area.Area)
+            {
+                c.LengthFromStart = Coordinate.FindDistance(pacman.Start, c);
+                c.HeuristicLengthToFinal = Coordinate.FindDistance(pacman.Finish, c);
+            }
             pacmanBox.Location = new Point(pixelSizeW * pacman.Start.X, pixelSizeH * pacman.Start.Y);
             Graphics bgGraphics = Graphics.FromImage(bgBitmap);
             for (int i = 0; i < n; i++)
@@ -117,6 +146,8 @@ namespace Lab3Pacman
             pacman.Area = area;
             dfsButton.Enabled = true;
             bfsButton.Enabled = true;
+            Astar.Enabled = true;
+            Greedy.Enabled = true;
         }
 
 
@@ -145,5 +176,7 @@ namespace Lab3Pacman
         {
 
         }
+
+       
     }
 }

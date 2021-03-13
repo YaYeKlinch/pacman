@@ -11,6 +11,30 @@ namespace Lab3Pacman
         public List<Coordinate> Neigbours { get; set; }
         public Coordinate Parent { get; set; }
         public bool IsFree { get; set; }
+        public Int32 LengthFromStart { get; set; }
+        public Int32 HeuristicLengthToFinal { get; set; }
+        public Int32 LengthFromLastCoor { 
+            get
+            {
+                if(Parent == null)
+                {
+                    return 0;
+                }
+                return  FindDistance(Parent , this);
+            }
+            set
+            {
+
+            }
+        }
+        public Int32 EstimateFullPathLength
+        {
+            get
+            {
+                return this.LengthFromStart + this.HeuristicLengthToFinal;
+            }
+        }
+
         public Coordinate()
         {
 
@@ -26,7 +50,7 @@ namespace Lab3Pacman
         {
             return FindDistance(a,b) == 1;
         }
-        private static Int32 FindDistance(Coordinate a, Coordinate b)
+        public static Int32 FindDistance(Coordinate a, Coordinate b)
         {
             return (Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y));
 

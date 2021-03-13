@@ -27,6 +27,7 @@ namespace Lab3Pacman
 		public long ChooseAlgorithm(String algorithm)
 		{
 			DeleteResult();
+
 			if (algorithm == "BFS")
 			{
 				return Algorithms.BFS(Start, Finish, Visited, Path);
@@ -34,6 +35,14 @@ namespace Lab3Pacman
 			else if(algorithm == "DFS")
 			{
 				return Algorithms.DFS(Start, Finish, Visited, Path);
+			}
+			else if(algorithm == "A")
+			{
+				return Algorithms.Astar(Start, Finish, Visited, Path);
+			}
+			else if(algorithm == "Greedy")
+			{
+				return Algorithms.Greedy(Start, Finish, Visited, Path);
 			}
 			else { return 0; }
 		}

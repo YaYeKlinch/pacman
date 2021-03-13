@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Lab3Pacman
 {
-    class Algorithms
-    {
-		public static long DFS(Coordinate Start , Coordinate Finish, HashSet<Coordinate> visited ,List<Coordinate> Path)
+	class Algorithms
+	{
+		public static long DFS(Coordinate Start, Coordinate Finish, HashSet<Coordinate> visited, List<Coordinate> Path)
 		{
 			using (Process pr = Process.GetCurrentProcess())
 			{
-				
+
 				var s = new Stack<Coordinate>();
 				s.Push(Start);
 				while (s.Count != 0)
@@ -76,5 +76,96 @@ namespace Lab3Pacman
 				return pr.PrivateMemorySize64;
 			}
 		}
+		public static long Astar(Coordinate Start, Coordinate Finish, HashSet<Coordinate> visited, List<Coordinate> Path)
+		{
+			using (Process pr = Process.GetCurrentProcess())
+			{
+				var l = new List<Coordinate>();
+				l.Add(Start);
+				while (l.Count != 0)
+				{
+					var currCoor = l.OrderBy(c => c.EstimateFullPathLength).First();
+					if (currCoor == Finish)
+					{
+						
+						while (currCoor != null)
+						{
+							Path.Add(currCoor);
+							currCoor = currCoor.Parent;
+						}
+						Path.Reverse();
+						return pr.PrivateMemorySize64;
+
+					}
+					l.Remove(currCoor);
+					visited.Add(currCoor);
+					foreach (Coordinate neigbour in currCoor.Neigbours.Where(x => !visited.Contains(x)))
+					{
+						var openNode = l.FirstOrDefault(c => c == neigbour);
+						neigbour.Parent = currCoor;
+						if (openNode == null)
+						{
+							l.Add(neigbour);
+						}
+						else
+						{
+							if (openNode.LengthFromStart > neigbour.LengthFromStart)
+							{
+								openNode.Parent = currCoor;
+								openNode.LengthFromStart = neigbour.LengthFromStart;
+							}
+						}
+					}
+				}
+				pr.Refresh();
+				return pr.PrivateMemorySize64;
+			}
+		}
+		public static long Greedy(Coordinate Start, Coordinate Finish, HashSet<Coordinate> visited, List<Coordinate> Path)
+		{
+			using (Process pr = Process.GetCurrentProcess())
+			{
+				var l = new List<Coordinate>();
+				l.Add(Start);
+				while (l.Count != 0)
+				{
+					var currCoor = l.OrderBy(c => c.LengthFromLastCoor).First();
+					if (currCoor == Finish)
+					{
+
+						while (currCoor != null)
+						{
+							Path.Add(currCoor);
+							currCoor = currCoor.Parent;
+						}
+						Path.Reverse();
+						return pr.PrivateMemorySize64;
+
+					}
+					l.Remove(currCoor);
+					visited.Add(currCoor);
+					foreach (Coordinate neigbour in currCoor.Neigbours.Where(x => !visited.Contains(x)))
+					{
+						var openNode = l.FirstOrDefault(c => c == neigbour);
+						neigbour.Parent = currCoor;
+						if (openNode == null)
+						{
+							l.Add(neigbour);
+						}
+						else
+						{
+							if (openNode.LengthFromLastCoor > neigbour.LengthFromLastCoor)
+							{
+								openNode.Parent = currCoor;
+								openNode.LengthFromLastCoor = neigbour.LengthFromLastCoor;
+							}
+						}
+					}
+				}
+				pr.Refresh();
+				return pr.PrivateMemorySize64;
+			}
+		}
+	
 	}
 }

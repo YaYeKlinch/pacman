@@ -39,6 +39,8 @@ namespace Lab3Pacman
             this.levelButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Astar = new System.Windows.Forms.Button();
+            this.Greedy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.levelBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacmanBox)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +59,7 @@ namespace Lab3Pacman
             // dfsButton
             // 
             this.dfsButton.Enabled = false;
-            this.dfsButton.Location = new System.Drawing.Point(231, 13);
+            this.dfsButton.Location = new System.Drawing.Point(204, 13);
             this.dfsButton.Margin = new System.Windows.Forms.Padding(4);
             this.dfsButton.Name = "dfsButton";
             this.dfsButton.Size = new System.Drawing.Size(94, 30);
@@ -69,7 +71,7 @@ namespace Lab3Pacman
             // bfsButton
             // 
             this.bfsButton.Enabled = false;
-            this.bfsButton.Location = new System.Drawing.Point(113, 13);
+            this.bfsButton.Location = new System.Drawing.Point(102, 13);
             this.bfsButton.Margin = new System.Windows.Forms.Padding(4);
             this.bfsButton.Name = "bfsButton";
             this.bfsButton.Size = new System.Drawing.Size(94, 26);
@@ -136,11 +138,35 @@ namespace Lab3Pacman
             this.label2.TabIndex = 9;
             this.label2.Text = "Memory";
             // 
+            // Astar
+            // 
+            this.Astar.Enabled = false;
+            this.Astar.Location = new System.Drawing.Point(305, 13);
+            this.Astar.Name = "Astar";
+            this.Astar.Size = new System.Drawing.Size(75, 30);
+            this.Astar.TabIndex = 10;
+            this.Astar.Text = "A*";
+            this.Astar.UseVisualStyleBackColor = true;
+            this.Astar.Click += new System.EventHandler(this.Astar_Click);
+            // 
+            // Greedy
+            // 
+            this.Greedy.Enabled = false;
+            this.Greedy.Location = new System.Drawing.Point(305, 46);
+            this.Greedy.Name = "Greedy";
+            this.Greedy.Size = new System.Drawing.Size(75, 33);
+            this.Greedy.TabIndex = 11;
+            this.Greedy.Text = "Greedy";
+            this.Greedy.UseVisualStyleBackColor = true;
+            this.Greedy.Click += new System.EventHandler(this.Greedy_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 554);
+            this.Controls.Add(this.Greedy);
+            this.Controls.Add(this.Astar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.levelButton);
@@ -172,6 +198,8 @@ namespace Lab3Pacman
         private System.Windows.Forms.Button levelButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Astar;
+        private System.Windows.Forms.Button Greedy;
     }
 }
 
